@@ -7,7 +7,7 @@ import logo from "../../assets/Group.svg"
     export default function Home(){
 
     return (
-        <div className="container">
+        <div className="content">
             <div className="logo">
                 <img src={logo} alt="Marketinf, unindo marcas e influenciadores"></img>
             </div>

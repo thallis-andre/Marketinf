@@ -1,15 +1,15 @@
-.container {
+.content {
     display: flex;
     justify-content: space-between;
 }
 
 .logo {
-    margin-left: -200px;
-    margin-top: 0px;
+    /* margin-left: -200px; */
+    /* margin-top: 0px; */
 }
 
 .azul {
-    position: absolute;
+    /* position: absolute; */
     width: 803px;
     height: 720px;
     left: 800px;
