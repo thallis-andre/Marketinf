@@ -77,8 +77,8 @@ export default function Busca() {
                             <Collapse isOpen={isOpen}>
                                 <h3 className="description">Breno corno</h3>
                                 <h3 className="description">João comedor de casadas</h3>
-                                <a href="https://fatosdesconhecidos.ig.com.br/de-onde-vem-expressao-corno-usada-quando-alguem-e-traido/"
-                                className="description" target="_blank">Clique aqui</a>
+                                {/* <a href="https://fatosdesconhecidos.ig.com.br/de-onde-vem-expressao-corno-usada-quando-alguem-e-traido/"
+                                className="description" target="_blank">Clique aqui</a> */}
                             </Collapse>
                         </div>
                     </Col>

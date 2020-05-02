@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: -200px;
+    margin-top: 0px;
+}
+
+.azul {
+    position: absolute;
+    width: 803px;
+    height: 720px;
+    left: 800px;
+    top: 0px;
+
+    background: #0075FF;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 170px 0px 170px 170px;
+}
+/* group btn */
+.btn-group {
+    width: 25%;
+    height: 6%;
+    left: 500px;
+    display: flex;
+    justify-content: flex-end;
+    
+    margin-right: 10%;
+    margin-top: 40px;
+    border-radius: 50px;
+    background-color: #F5F5F5;
+    
+}
+
+.entrarbtn {
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    background-color: #F5F5F5;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+}
+
+.entrarbtn-text {
+    font-size: 20px;
+    color: #4F4F4F;
+}
+
+.entrarbtn:hover{
+    background-color: #D9D9D9;
+}
+
+.entrarbtn:hover .entrarbtn-text {
+    color: #4F4F4F;
+}
+
+/* Cadastrar */
+
+.cadastrarbtn {
+    width: 100%;
+    border-radius: 0 50px 50px 0;
+    background-color: #E3E3E3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+.cadastrarbtn-text {
+    font-size: 20px;
+    color: #4F4F4F;
+}
+
+.cadastrarbtn:hover{
+    background-color: #C7C7C7;
+}
+
+.cadastrarbtn:hover .cadastrarbtn-text {
+    color: #4F4F4F;
+}
+
+.home-box {
+    padding: 100px;
+    display: block;
+    color: #F5F5F5;
+}
+
+.home-title {
+    font-size: 40px;
+}
+
+.home-p {
+    font-size: 30px;
+}
