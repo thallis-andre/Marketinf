@@ -49,45 +49,50 @@ export default function Cadastrar() {
                         </div>
 
                         <div className="login-area">
-                            <Form onSubmit="registrar">
-                                <Form.Group>
-                                    <Form.Label>Nome:</Form.Label>
-                                    <Form.Control type="text" value={nome} onChange={event => setNome(event.target.value)}/>
-                                </Form.Group>
-                                <Form.Group controlId="formBasicEmail">
-                                    <Form.Label>Email:</Form.Label>
-                                    <Form.Control type="email" value={email} onChange={event => setEmail(event.target.value)}/>
-                                </Form.Group>
-                                <Form.Group controlId="formBasicPassword">
-                                    <Form.Label>Senha:</Form.Label>
-                                    <Form.Control type="password" value={senha} onChange={event => setSenha(event.target.value)}/>
-                                </Form.Group>
-                                {['radio'].map((type) => (
-                                    <div key={`checkbox`} className="mb-3" >
-                                        <Form.Check
-                                            type="radio"
-                                            label="Influenciador"
-                                            name="checkbox"
-                                            id="checkbox-influenciador"
-                                        />
-                                        <Form.Check
-                                            type="radio"
-                                            label="Loja"
-                                            name="checkbox"
-                                            id="checkbox-loja"
-                                        />
-                                    </div>
-                                ))}
-                                <Button color="primary" type="submit">
-                                    Próximo
-                                </Button>
-                                <span> &nbsp; </span>
-                                <Button color="primary" type="submit" onClick={chamarAlert}>
-                                    .
-                                </Button>
-                                
-                            </Form>
 
+                            <div className="form-area">
+                            
+                                <Button outline color="secondary" href="/">Voltar</Button>
+
+                                <Form onSubmit="registrar">
+                                    <Form.Group>
+                                        <Form.Label>Nome:</Form.Label>
+                                        <Form.Control type="text" value={nome} onChange={event => setNome(event.target.value)}/>
+                                    </Form.Group>
+                                    <Form.Group controlId="formBasicEmail">
+                                        <Form.Label>Email:</Form.Label>
+                                        <Form.Control type="email" value={email} onChange={event => setEmail(event.target.value)}/>
+                                    </Form.Group>
+                                    <Form.Group controlId="formBasicPassword">
+                                        <Form.Label>Senha:</Form.Label>
+                                        <Form.Control type="password" value={senha} onChange={event => setSenha(event.target.value)}/>
+                                    </Form.Group>
+                                    {['radio'].map((type) => (
+                                        <div key={`checkbox`} className="mb-3" >
+                                            <Form.Check
+                                                type="radio"
+                                                label="Influenciador"
+                                                name="checkbox"
+                                                id="checkbox-influenciador"
+                                            />
+                                            <Form.Check
+                                                type="radio"
+                                                label="Loja"
+                                                name="checkbox"
+                                                id="checkbox-loja"
+                                            />
+                                        </div>
+                                    ))}
+                                    <Button color="primary" type="submit">
+                                        Próximo
+                                    </Button>
+                                    <span> &nbsp; </span>
+                                    <Button color="primary" type="submit" onClick={chamarAlert}>
+                                        .
+                                    </Button>
+                                    
+                                </Form>
+                            </div>
 
                         </div>
 
