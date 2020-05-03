@@ -5,7 +5,9 @@ import Home from './Pages/Home/home';
 import Busca from './Pages/Busca/index';
 import Entrar from './Pages/Entrar/entrar';
 import Cadastrar from './Pages/Cadastrar/cadastrar';
+
 import Anuncios from './Pages/Anúncios/anuncio';
+
 import Loja from './Pages/Cadastrar/Loja/loja';
 import Inf from './Pages/Cadastrar/Inf/inf';
 
@@ -20,6 +22,7 @@ export default function Routes() {
                 <Route path="/cadastrar/loja" component={ Loja } />
                 <Route path="/cadastrar" component={ Cadastrar } />
                 <Route path="/empresa" component={ Anuncios } />
+
             </Switch>
         </BrowserRouter>
     );
