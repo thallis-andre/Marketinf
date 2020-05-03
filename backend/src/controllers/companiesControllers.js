@@ -5,7 +5,7 @@ module.exports = {
     return response.json(results);
   },
 
-  async create(request, response) {
+  async create(request, response, next) {
     try {
       const { name, email, password, segment, city } = request.body;
 
@@ -28,6 +28,7 @@ module.exports = {
         mensagem: "Empresa cadastrado com sucesso",
       });
     } catch (error) {
+      next(error);
       console.log("erro ao registrar empresa");
     }
   },

@@ -1,7 +1,7 @@
 const connection = require("../database/connection");
 import influencers from "../models/influencers";
 module.exports = {
-  async create(request, response) {
+  async create(request, response, next) {
     try {
       const { name, email, password, ig_name, city } = request.body;
 
@@ -24,6 +24,7 @@ module.exports = {
         mensagem: "Usuário cadastrado com sucesso",
       });
     } catch (error) {
+      next(error);
       console.log("erro ao criar usuario");
     }
   },
