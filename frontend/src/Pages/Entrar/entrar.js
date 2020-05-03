@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 import './entrar.css';
@@ -7,6 +7,24 @@ import { Button } from 'reactstrap';
 import { Row, Col, Form } from 'react-bootstrap';
 
 export default function Entrar() {
+
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+
+    /*
+    async function registrar(event) {
+        const data = {
+            nome,
+            email,
+            senha,
+        }
+
+    }
+    */
+
+    const chamarAlert = () => {
+        alert(`E-mail:${email} Senha:${senha}`);
+    }
 
     return (
         <div className="bcontent">
@@ -28,20 +46,28 @@ export default function Entrar() {
                         </div>
 
                         <div className="login-area">
-                            <Form>
-                                <Form.Group controlId="formBasicEmail">
-                                    <Form.Label>Email:</Form.Label>
-                                    <Form.Control type="email"/>
-                                </Form.Group>
+                            <div className="form-area-entrar">
+                                    
+                                <Button outline color="secondary" href="/">Voltar</Button><br/><br/><br/>
+                                <Form>
+                                    <Form.Group controlId="formBasicEmail">
+                                        <Form.Label>Email:</Form.Label>
+                                        <Form.Control type="email" value={email} onChange={event => setEmail(event.target.value)}/>
+                                    </Form.Group>
 
-                                <Form.Group controlId="formBasicPassword">
-                                    <Form.Label>Senha:</Form.Label>
-                                    <Form.Control type="password"/>
-                                </Form.Group>
-                                <Button color="primary" type="submit">
-                                    Entrar
-                                </Button>
-                            </Form>
+                                    <Form.Group controlId="formBasicPassword">
+                                        <Form.Label>Senha:</Form.Label>
+                                        <Form.Control type="password" value={senha} onChange={event => setSenha(event.target.value)}/>
+                                    </Form.Group>
+                                    <Button color="primary" type="submit">
+                                        Entrar
+                                    </Button>
+                                    <span> &nbsp; </span>
+                                    <Button color="primary" type="submit" onClick={chamarAlert}>
+                                        .
+                                    </Button>
+                                </Form>
+                            </div>
 
                         </div>
 

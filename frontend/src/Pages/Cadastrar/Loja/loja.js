@@ -48,45 +48,50 @@ export default function Loja() {
                         </div>
 
                         <div className="login-area">
-                            <Form>
-                                <label>Usuário do instagram:</label>
-                                <InputGroup className="mb-3">
-                                    <InputGroup.Prepend>
-                                        <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-                                    </InputGroup.Prepend>
-                                    <FormControl
-                                        placeholder="Username"
-                                        aria-label="Username"
-                                        aria-describedby="basic-addon1"
-                                        value={userig} onChange={event => setUserig(event.target.value)}
-                                    />
-                                </InputGroup>
-                                <Form.Group>
-                                    <Form.Label>Site:</Form.Label>
-                                    <Form.Control type="text" value={site} onChange={event => setSite(event.target.value)}/>
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>Cidade:</Form.Label>
-                                    <Form.Control type="text" value={cidade} onChange={event => setCidade(event.target.value)}/>
-                                </Form.Group>
-                                <Form.Group controlId="exampleForm.ControlSelect1">
-                                    <Form.Label>Selecione o setor da sua loja:</Form.Label>
-                                    <Form.Control as="select">
-                                        <option>Roupas</option>
-                                        <option>Acessórios</option>
-                                        <option>Beleza</option>
-                                        <option>Outro</option>
-                                    </Form.Control>
-                                </Form.Group>
-                                <Button color="primary" type="submit">
-                                    Entrar
-                                </Button>
-                                <span> &nbsp; </span>
-                                <Button color="primary" type="submit" onClick={chamarAlert}>
-                                    .
-                                </Button>
+                            <div className="form-area">
                                 
-                            </Form>
+                                <Button outline color="secondary" href="/">Voltar</Button>
+                                <Form onSubmit="registrar">
+                                    <label>Usuário do instagram:</label>
+                                    <InputGroup className="mb-3">
+                                        <InputGroup.Prepend>
+                                            <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <FormControl
+                                            placeholder="Username"
+                                            aria-label="Username"
+                                            aria-describedby="basic-addon1"
+                                            value={userig} onChange={event => setUserig(event.target.value)}
+                                        />
+                                    </InputGroup>
+                                    <Form.Group>
+                                        <Form.Label>Site:</Form.Label>
+                                        <Form.Control type="text" value={site} onChange={event => setSite(event.target.value)}/>
+                                    </Form.Group>
+                                    <Form.Group>
+                                        <Form.Label>Cidade:</Form.Label>
+                                        <Form.Control type="text" value={cidade} onChange={event => setCidade(event.target.value)}/>
+                                    </Form.Group>
+                                    <Form.Group controlId="exampleForm.ControlSelect1">
+                                        <Form.Label>Selecione o setor da sua loja:</Form.Label>
+                                        <Form.Control as="select">
+                                            <option>Roupas</option>
+                                            <option>Acessórios</option>
+                                            <option>Beleza</option>
+                                            <option>Outro</option>
+                                        </Form.Control>
+                                    </Form.Group>
+                                    <Button color="primary" type="submit">
+                                        Entrar
+                                    </Button>
+                                    <span> &nbsp; </span>
+                                    <Button color="primary" type="submit" onClick={chamarAlert}>
+                                        .
+                                    </Button>
+                                    
+                                </Form>
+
+                            </div>
 
                         </div>
 

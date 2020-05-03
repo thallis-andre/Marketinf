@@ -48,60 +48,66 @@ export default function Inf() {
                         </div>
 
                         <div className="login-area">
-                            <Form>
-                            <label>Usuário do instagram:</label>
-                                <InputGroup className="mb-3">
-                                    <InputGroup.Prepend>
-                                        <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-                                    </InputGroup.Prepend>
-                                    <FormControl
-                                        placeholder="Username"
-                                        aria-label="Username"
-                                        aria-describedby="basic-addon1"
-                                        value={userig} onChange={event => setUserig(event.target.value)}
-                                    />
-                                </InputGroup>
-                                <label>Sexo:</label>
-                                {['radio'].map((type) => (
-                                    <div key={`checkbox-sex`} className="mb-3">
-                                        <Form.Check
-                                            type="radio"
-                                            label="Masculino"
-                                            name="checkbox-sex"
-                                            id="checkbox-masc"
+                            <div className="form-area">
+                                    
+                                <Button outline color="secondary" href="/">Voltar</Button>
+                                <Form onSubmit="registrar">
+                                <label>Usuário do instagram:</label>
+                                    <InputGroup className="mb-3">
+                                        <InputGroup.Prepend>
+                                            <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <FormControl
+                                            placeholder="Username"
+                                            aria-label="Username"
+                                            aria-describedby="basic-addon1"
+                                            value={userig} onChange={event => setUserig(event.target.value)}
                                         />
-                                        <Form.Check
-                                            type="radio"
-                                            label="Feminino"
-                                            name="checkbox-sex"
-                                            id="checkbox-fem"
-                                        />
-                                        <Form.Check
-                                            type="radio"
-                                            label="Outro"
-                                            name="checkbox-sex"
-                                            id="checkbox-outro"
-                                        />
-                                    </div>
-                                ))}
-                                <Form.Group>
-                                    <Form.Label>Cidade:</Form.Label>
-                                    <Form.Control type="text" value={cidade} onChange={event => setCidade(event.target.value)}/>
-                                </Form.Group>
-                                <Form.Group controlId="exampleForm.ControlTextarea1">
-                                    <Form.Label>Digite uma descrição sobre você</Form.Label>
-                                    <Form.Control as="textarea" rows="3" value={descricao} onChange={event => setDescricao(event.target.value)}/>
-                                </Form.Group>
-                                <Button color="primary" type="submit">
-                                    Entrar
-                                </Button>
-                                <span> &nbsp; </span>
-                                <Button color="primary" type="submit" onClick={chamarAlert}>
-                                    .
-                                </Button>
-                                
-                            </Form>
-
+                                    </InputGroup>
+                                    <label>Sexo:</label>
+                                    {['radio'].map((type) => (
+                                        <div key={`inline-checkbox-sex`} className="mb-3">
+                                            <Form.Check
+                                                type="radio"
+                                                inline
+                                                label="Masculino"
+                                                name="checkbox-sex"
+                                                id="checkbox-masc"
+                                            />
+                                            <Form.Check
+                                                type="radio"
+                                                inline
+                                                label="Feminino"
+                                                name="checkbox-sex"
+                                                id="checkbox-fem"
+                                            />
+                                            <Form.Check
+                                                type="radio"
+                                                inline
+                                                label="Outro"
+                                                name="checkbox-sex"
+                                                id="checkbox-outro"
+                                            />
+                                        </div>
+                                    ))}
+                                    <Form.Group>
+                                        <Form.Label>Cidade:</Form.Label>
+                                        <Form.Control type="text" value={cidade} onChange={event => setCidade(event.target.value)}/>
+                                    </Form.Group>
+                                    <Form.Group controlId="exampleForm.ControlTextarea1">
+                                        <Form.Label>Digite uma descrição sobre você</Form.Label>
+                                        <Form.Control as="textarea" rows="3" value={descricao} onChange={event => setDescricao(event.target.value)}/>
+                                    </Form.Group>
+                                    <Button color="primary" type="submit">
+                                        Entrar
+                                    </Button>
+                                    <span> &nbsp; </span>
+                                    <Button color="primary" type="submit" onClick={chamarAlert}>
+                                        .
+                                    </Button>
+                                    
+                                </Form>
+                            </div>
                         </div>
 
                     </div>
