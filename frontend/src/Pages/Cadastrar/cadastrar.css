@@ -25,18 +25,14 @@
     border-radius: 170px 0px 170px 170px;
 }
 /* group btn */
-.btn-group {
-    width: 25%;
-    height: 6%;
-    left: 500px;
+
+.btngroup {
+    padding-top: 5%;
+    padding-right: 10%;
+
     display: flex;
     justify-content: flex-end;
-    
-    margin-right: 10%;
-    margin-top: 40px;
-    border-radius: 50px;
-    background-color: #F5F5F5;
-    
+
 }
 
 .entrarbtn {
