@@ -5,7 +5,10 @@ import Home from './Pages/Home/home';
 import Busca from './Pages/Busca/index';
 import Entrar from './Pages/Entrar/entrar';
 import Cadastrar from './Pages/Cadastrar/cadastrar';
+import Loja from './Pages/Cadastrar/Loja/loja';
+import Inf from './Pages/Cadastrar/Inf/inf';
 import Anuncios from './Pages/Anúncios/anuncio';
+
 
 export default function Routes() {
     return (
@@ -14,6 +17,8 @@ export default function Routes() {
                 <Route path="/" exact component={ Home } />
                 <Route path="/influencer" component={ Busca } />
                 <Route path="/entrar" component={ Entrar } />
+                <Route path="/cadastrar/inf" component={ Inf } />
+                <Route path="/cadastrar/loja" component={ Loja } />
                 <Route path="/cadastrar" component={ Cadastrar } />
                 <Route path="/empresa" component={ Anuncios } />
             </Switch>

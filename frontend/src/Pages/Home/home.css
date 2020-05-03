@@ -25,6 +25,16 @@
     border-radius: 170px 0px 170px 170px;
 }
 /* group btn */
+
+.btngroup {
+    padding-top: 5%;
+    padding-right: 10%;
+
+    display: flex;
+    justify-content: flex-end;
+
+}
+
 .btn-group {
     width: 25%;
     height: 6%;
