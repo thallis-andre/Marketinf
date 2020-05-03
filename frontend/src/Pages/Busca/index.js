@@ -12,7 +12,7 @@ export default function Influencer() {
 
     const toggle = () => setIsOpen(!isOpen);
 
-    const [anuncios, setAnuncios] = useState([1, 2, 3, 4, 5, 6])
+    const [anuncios, setAnuncios] = useState([1, 2, 3, 4, 5, 6]);
 
 
 
@@ -21,7 +21,7 @@ export default function Influencer() {
         <div className="content">
 
             <div className="header">
-                <Row>
+                <Row className="row-header justify-content-md-center">
                     <Col lg={4}>
                         <div className="title">
                             <h1 className="search-marca">Pesquisa marca:</h1>
@@ -30,24 +30,29 @@ export default function Influencer() {
                     </Col>
 
                     <Col lg={8}>
-                        <input className="search-input" type="text" />
-                        <Row className="justify-content-md-center">
-                            {/* <div className="all-filters"></div> */}
-                            <Col>
-                                <div className="filter"><span className="title-filter">Tudo</span></div>
-                            </Col>
-                            <Col>
-                                <div className="filter"><span className="title-filter">Roupas</span></div>
-                            </Col>
-                            <Col>
-                                <div className="filter"><span className="title-filter">Acessórios</span></div>
-                            </Col>
-                            <Col>
-                                <div className="filter"><span className="title-filter">Beleza</span></div>
 
-                            </Col>
-                        </Row>
+
+                        <div className="search">
+                            <input className="search-input" type="text" />
+                            <Row className="justify-content-md-center">
+                                {/* <div className="all-filters"></div> */}
+                                <Col>
+                                    <div className="filter"><span className="title-filter">Tudo</span></div>
+                                </Col>
+                                <Col>
+                                    <div className="filter"><span className="title-filter">Roupas</span></div>
+                                </Col>
+                                <Col>
+                                    <div className="filter"><span className="title-filter">Acessórios</span></div>
+                                </Col>
+                                <Col>
+                                    <div className="filter"><span className="title-filter">Beleza</span></div>
+
+                                </Col>
+                            </Row>
+                        </div>
                     </Col>
+
 
                 </Row>
             </div>
