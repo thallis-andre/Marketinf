@@ -32,4 +32,28 @@ module.exports = {
       console.log("erro ao registrar empresa");
     }
   },
+
+  async readAcessorio(request, response) {
+    const results = knex("companies")
+      .select("acessorios")
+      .then(function (a) {
+        return response.json(results);
+      });
+  },
+
+  async readRoupas(request, response) {
+    const results = knex("companies")
+      .select("roupas")
+      .then(function (a) {
+        return response.json(results);
+      });
+  },
+
+  async readBeleza(request, response) {
+    const results = knex("companies")
+      .select("beleza")
+      .then(function (a) {
+        return response.json(results);
+      });
+  },
 };
