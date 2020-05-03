@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React from 'react';
 
 
 import '../cadastrar.css';
@@ -7,26 +7,6 @@ import { Button } from 'reactstrap';
 import { Row, Col, Form, InputGroup, FormControl } from 'react-bootstrap';
 
 export default function Loja() {
-
-    const [userig, setUserig] = useState('');
-    const [site, setSite] = useState('');
-    const [cidade, setCidade] = useState('');
-    //FALTA SELECT
-
-    /*
-    async function registrar(event) {
-        const data = {
-            nome,
-            email,
-            senha,
-        }
-
-    }
-    */
-
-    const chamarAlert = () => {
-        alert(`Nome:${userig} E-mail:${site} Senha:${cidade}`);
-    }
 
     return (
         <div className="bcontent">
@@ -58,16 +38,15 @@ export default function Loja() {
                                         placeholder="Username"
                                         aria-label="Username"
                                         aria-describedby="basic-addon1"
-                                        value={userig} onChange={event => setUserig(event.target.value)}
                                     />
                                 </InputGroup>
                                 <Form.Group>
                                     <Form.Label>Site:</Form.Label>
-                                    <Form.Control type="text" value={site} onChange={event => setSite(event.target.value)}/>
+                                    <Form.Control type="text"/>
                                 </Form.Group>
                                 <Form.Group>
                                     <Form.Label>Cidade:</Form.Label>
-                                    <Form.Control type="text" value={cidade} onChange={event => setCidade(event.target.value)}/>
+                                    <Form.Control type="text"/>
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlSelect1">
                                     <Form.Label>Selecione o setor da sua loja:</Form.Label>
@@ -80,10 +59,6 @@ export default function Loja() {
                                 </Form.Group>
                                 <Button color="primary" type="submit">
                                     Entrar
-                                </Button>
-                                <span> &nbsp; </span>
-                                <Button color="primary" type="submit" onClick={chamarAlert}>
-                                    .
                                 </Button>
                                 
                             </Form>
