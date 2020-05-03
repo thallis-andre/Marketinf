@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 import '../cadastrar.css';
@@ -7,6 +7,26 @@ import { Button } from 'reactstrap';
 import { Row, Col, Form, InputGroup, FormControl } from 'react-bootstrap';
 
 export default function Inf() {
+
+    const [userig, setUserig] = useState('');
+    const [cidade, setCidade] = useState('');
+    const [descricao, setDescricao] = useState('');
+    //FALTA SELECT
+
+    /*
+    async function registrar(event) {
+        const data = {
+            nome,
+            email,
+            senha,
+        }
+
+    }
+    */
+
+    const chamarAlert = () => {
+        alert(`Nome:${userig} E-mail:${cidade} Senha:${descricao}`);
+    }
 
     return (
         <div className="bcontent">
@@ -38,6 +58,7 @@ export default function Inf() {
                                         placeholder="Username"
                                         aria-label="Username"
                                         aria-describedby="basic-addon1"
+                                        value={userig} onChange={event => setUserig(event.target.value)}
                                     />
                                 </InputGroup>
                                 <label>Sexo:</label>
@@ -65,14 +86,18 @@ export default function Inf() {
                                 ))}
                                 <Form.Group>
                                     <Form.Label>Cidade:</Form.Label>
-                                    <Form.Control type="text"/>
+                                    <Form.Control type="text" value={cidade} onChange={event => setCidade(event.target.value)}/>
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlTextarea1">
                                     <Form.Label>Digite uma descrição sobre você</Form.Label>
-                                    <Form.Control as="textarea" rows="3" />
+                                    <Form.Control as="textarea" rows="3" value={descricao} onChange={event => setDescricao(event.target.value)}/>
                                 </Form.Group>
                                 <Button color="primary" type="submit">
                                     Entrar
+                                </Button>
+                                <span> &nbsp; </span>
+                                <Button color="primary" type="submit" onClick={chamarAlert}>
+                                    .
                                 </Button>
                                 
                             </Form>
