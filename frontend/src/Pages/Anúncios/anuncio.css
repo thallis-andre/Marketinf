@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+
+.options {
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    margin-bottom: 5px;
+    border-radius: 100%;
+}
