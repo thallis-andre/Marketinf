@@ -1,9 +1,9 @@
 exports.up = function (knex) {
   return knex.schema.createTable("influencers", function (table) {
-    table.increments();
+    table.increments("id").unique();
     table.string("name").notNullable();
-    table.string("email").notNullable();
-    table.string("password").notNullable();
+    table.string("email").unique().notNullable();
+    table.string("password").notNullable(); //não estamos usando o hash nesse momento, contem grande vunerabilidade no sistema
     table.string("ig_name").notNullable();
     table.string("city").notNullable();
   });
