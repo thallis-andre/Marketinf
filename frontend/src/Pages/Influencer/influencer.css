@@ -6,8 +6,21 @@
     width: 100%;
 }
 
+/* margin-left: 30px;
 .search {
-    /* margin-left: 30px; */
+    
+} */
+
+.input-procurar {
+    margin-left: 100px;
+}
+
+.btn-procurar {
+    margin-right: 200px;
+}
+
+.btn-nav-bar {
+    margin-left: 40px;
 }
 
 .search-marca {
@@ -71,8 +84,8 @@
 }
 
 .circle {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50px;
     background-color: #B6B6B6;
     box-shadow: 0px 0px 33px 13px rgba(0,0,0,0.1);
@@ -92,8 +105,8 @@
 }
 
 .foto {
-    width: 5em;
-    height: 5em;
+    width: 4.5em;
+    height: 4.5em;
     margin: auto;
     border-radius: 50%;
     background-color: #B6B6B6;
@@ -108,7 +121,7 @@
 
 .title{
     color: #333333;
-    font-size: 2.5em;
+    font-size: 2em;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -116,7 +129,7 @@
 
 .description{
     color: #828282;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .empresa:hover {

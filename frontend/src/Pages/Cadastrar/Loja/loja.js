@@ -45,8 +45,8 @@ export default function Loja() {
                     <div className="azul">
                         
                         <div className="btngroup">
-                            <Button color="secondary" href="/entrar">Entrar</Button><span> &nbsp; </span>
-                            <Button color="secondary" href="/cadastrar">Cadastrar</Button>
+                            <Button color="outline-light" href="/entrar">Entrar</Button><span> &nbsp; </span>
+                            <Button color="outline-light" href="/cadastrar">Cadastrar</Button>
                         </div>
 
                         <div className="login-area">

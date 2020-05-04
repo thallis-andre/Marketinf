@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap';
+import { Row, Col, Button, InputGroup, FormControl, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { Collapse } from 'reactstrap';
+import logoBSolo from "../../assets/LogoBrancasolo.svg";
 
 import './empresa.css';
 
@@ -21,36 +22,36 @@ export default function Empresa() {
         setAnuncios([
             {
                 id: 1,
-                marca: 'Nike',
-                ig_empresa: '@NikeOficial',
+                marca: 'Thallis André',
+                ig_empresa: '@Thallis-santo-andre',
                 cidade: 'Gôiania',
-                endereco: 'Shopping Flamboyant',
-                setor: 'Roupas',
+                endereco: '',
+                setor: '1529',
                 isOpen,
             },
             {
                 id: 2,
-                marca: 'Pandora',
-                ig_empresa: '@Pandora',
+                marca: 'Breno Andrade',
+                ig_empresa: '@Breno_h',
                 cidade: 'Gôiania',
-                endereco: 'Shopping Flamboyant',
-                setor: 'Acessórios',
+                endereco: '',
+                setor: '5089',
             },
             {
                 id: 3,
-                marca: 'M.A.C.',
-                ig_empresa: '@M.A.C.',
+                marca: 'João Pedro Gama',
+                ig_empresa: '@jp_gama_oficial',
                 cidade: 'Gôiania',
-                endereco: 'Shopping Flamboyant',
-                setor: 'Beleza',
+                endereco: '',
+                setor: '8775',
             },
             {
                 id: 4,
-                marca: 'Nike',
-                ig_empresa: '@testetets',
+                marca: 'Glauber',
+                ig_empresa: '@glauber_violino',
                 cidade: 'Gôiania',
-                endereco: 'Shopping Flamboyant',
-                setor: 'Roupas',
+                endereco: '',
+                setor: '1888',
             },
         ]);
     }, []);
@@ -58,78 +59,111 @@ export default function Empresa() {
 
     return (
 
-        <div className="content">
-
-            <div className="">
-
-                <h1 className="search-marca mb-4">Pesquisa influencer:</h1>
-
-                <InputGroup className="mb-3 search-input" size="lg" >
-                    <FormControl
-                        value={inputValue} onChange={event => setInputValue(event.target.value)}
-                        placeholder="Digite uma marca..."
+        <div>
+            <Navbar bg="primary" variant="dark">
+                <Navbar.Brand href="#home">
+                    <img
+                        alt="."
+                        src={logoBSolo}
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top"
                     />
-                    <InputGroup.Append>
-                        <Button variant="primary">Pesquisar</Button>
-                    </InputGroup.Append>
-                </InputGroup>
+                    Marketinf
+                </Navbar.Brand>
+                <Nav className="mr-auto">
+                </Nav>
+                <Nav className="mr-auto">
+                </Nav>
+                <Nav className="mr-auto">
+                </Nav>
+                <Nav className="mr-auto">
+                </Nav>
+                <Nav className="mr-auto">
+                </Nav>
+                <Nav className="mr-auto">
+                </Nav>
+                <Nav className="mr-auto">
+                    <NavDropdown title="Perfil" id="collasible-nav-dropdown">
+                        <NavDropdown.Item href="#">Editar perfil</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="/empresa/anuncios">Meus Anuncios</NavDropdown.Item>
+                    </NavDropdown>
+                    <Button variant="outline-light" href="/" className="btn-nav-bar">Sair</Button>
+                </Nav>
+            </Navbar>
 
-                <div className="buttons-group">
-                    <Button variant="primary" className="mr-5">Tudo</Button>
-                    <Button variant="primary" className="mr-5">Roupa</Button>
-                    <Button variant="primary" className="mr-5">Acessórios</Button>
-                    <Button variant="primary">Beleza</Button>
+            <div className="content">
+
+
+                <div className="">
+
+                    <h1 className="search-marca mb-4">Pesquisar influenciador:</h1>
+
+                    <InputGroup className="mb-3 search-input input-procurar" size="lg" >
+                        <FormControl
+                            value={inputValue} onChange={event => setInputValue(event.target.value)}
+                            placeholder="Digite uma marca..."
+                        />
+                        <InputGroup.Append>
+                            <Button variant="primary" className="btn-procurar">Pesquisar</Button>
+                        </InputGroup.Append>
+                    </InputGroup>
+
+                    <div className="buttons-group">
+                        <Button variant="primary" className="mr-5">Mais seguidores</Button>
+                        <Button variant="primary" className="mr-5">Menos seguidores</Button>
+                    </div>
+
                 </div>
+                <ul>
 
-            </div>
-            <ul>
+                    {anuncios.map(anuncios => (
+                        <li className="empresa-list" key={anuncios.id}>
 
-                {anuncios.map(anuncios => (
-                    <li className="empresa-list" key={anuncios.id}>
-
-                        <div className="circle"></div>
+                            <div className="circle"></div>
 
 
-                        <div className="empresa">
-                            <Col>
-                                <div className="foto"></div>
-                            </Col>
-                            <Col lg={4}>
-                                <div className="nome">
-                                    <h2 className="title">{anuncios.marca}</h2>
-                                    <h3 className="description">{anuncios.ig_empresa}</h3>
-                                    <Collapse isOpen={anuncios.isOpen}>
-                                        {/* <h3 className="description">Desejo que você
-                                        Não tenha medo da vida, tenha medo de não vivê-la.
-                                Não há céu sem tempestades. Por isso, comi o cu de quem ta lendo</h3> */}
-                                    </Collapse>
-                                </div>
-                            </Col>
-                            <Col lg={3}>
-                                <div className="cidade">
-                                    <h2 className="title">{anuncios.cidade}</h2>
-                                    <h3 className="description">{anuncios.endereco}</h3>
-                                    <Collapse isOpen={anuncios.isOpen}>
-                                        {/* <h3 className="description">Breno corno</h3> */}
-                                    </Collapse>
-                                </div>
-                            </Col>
-                            <Col lg={3}>
-                                <div className="setor">
-                                    <h2 className="title">Setor</h2>
-                                    <h3 className="description">{anuncios.setor}</h3>
-                                    <Collapse isOpen={anuncios.isOpen}>
-                                        {/* <h3 className="description" >Só é corno quem é curioso</h3> */}
-                                    </Collapse>
-                                </div>
-                            </Col>
-                        </div>
-                    </li>
-                ))}
-            </ul>
-        </div >
+                            <div className="empresa">
+                                <Col>
+                                    <div className="foto"></div>
+                                </Col>
+                                <Col lg={4}>
+                                    <div className="nome">
+                                        <h2 className="title">{anuncios.marca}</h2>
+                                        <h3 className="description">{anuncios.ig_empresa}</h3>
+                                        <Collapse isOpen={anuncios.isOpen}>
+                                            {/* <h3 className="description">Desejo que você
+                                            Não tenha medo da vida, tenha medo de não vivê-la.
+                                    Não há céu sem tempestades. Por isso, comi o cu de quem ta lendo</h3> */}
+                                        </Collapse>
+                                    </div>
+                                </Col>
+                                <Col lg={3}>
+                                    <div className="cidade">
+                                        <h2 className="title">{anuncios.cidade}</h2>
+                                        <h3 className="description">{anuncios.endereco}</h3>
+                                        <Collapse isOpen={anuncios.isOpen}>
+                                            {/* <h3 className="description">Breno corno</h3> */}
+                                        </Collapse>
+                                    </div>
+                                </Col>
+                                <Col lg={3}>
+                                    <div className="setor">
+                                        <h2 className="title">Seguidores</h2>
+                                        <h3 className="description">{anuncios.setor}</h3>
+                                        <Collapse isOpen={anuncios.isOpen}>
+                                            {/* <h3 className="description" >Só é corno quem é curioso</h3> */}
+                                        </Collapse>
+                                    </div>
+                                </Col>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </div >
 
-
+        </div>
 
 
 
