@@ -4,13 +4,29 @@ module.exports = {
   async create(request, response, next) {
     try {
       const { name, email, password, ig_name, city } = request.body;
-
+      function getinfos() {
+        var follower = routes.get(
+          `https://www.instagram.com/${user_name}/?__a=1`,
+          (request, response) => {
+            return response.json().edge_followed_by.count;
+          }
+        );
+        var following = routes.get(
+          `https://www.instagram.com/${user_name}/?__a=1`,
+          (request, response) => {
+            return response.json().edge_follow.count;
+          }
+        );
+      }
+      const { follower, following } = getinfos;
       await connection("influencers").insert({
         name,
         email,
         password,
         ig_name,
         city,
+        following,
+        follower,
       });
 
       const exists = await influencers.findOne({

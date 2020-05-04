@@ -8,13 +8,29 @@ module.exports = {
   async create(request, response, next) {
     try {
       const { name, email, password, segment, city } = request.body;
-
+      function getinfos() {
+        var follower = routes.get(
+          `https://www.instagram.com/${user_name}/?__a=1`,
+          (request, response) => {
+            return response.json().edge_followed_by.count;
+          }
+        );
+        var following = routes.get(
+          `https://www.instagram.com/${user_name}/?__a=1`,
+          (request, response) => {
+            return response.json().edge_follow.count;
+          }
+        );
+      }
+      const { follower, following } = getinfos;
       await connection("companies").insert({
         name,
         email,
         password,
         segment,
         city,
+        following,
+        follower,
       });
 
       const exists = await companies.findOne({

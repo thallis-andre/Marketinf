@@ -6,6 +6,8 @@ exports.up = function (knex) {
     table.string("password").notNullable(); //não estamos usando o hash nas nesse momento, contem grande vunerabilidade no sistema
     table.string("segment").notNullable();
     table.string("city").notNullable();
+    table.integer("follower").notNullable();
+    table.integer("following").notNullable();
   });
 };
 
