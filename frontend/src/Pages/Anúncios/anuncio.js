@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { Row, Col } from 'react-bootstrap';
-import { Collapse } from 'reactstrap';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap';
+
 
 
 import './anuncio.css';
@@ -24,26 +24,14 @@ export default function Anuncio() {
     return (
 
         <div className="content">
+            <div className="">
 
-            <div className="header">
-                <Row className="justify-content-md-center">
-                    <div className="title">
-                        <h1 className="search-marca">Meus anúncios</h1>
-                    </div>
+                <h1 className="search-marca mb-4">Meus anúncios</h1>
 
-                    <Col lg={8}>
-                        <Row className="justify-content-md-center">
-                            {/* <div className="all-filters"></div> */}
-                            <Col>
-                                <div className="filter"><span className="title-filter">Ativos</span></div>
-                            </Col>
-                            <Col>
-                                <div className="filter"><span className="title-filter">Inativos</span></div>
-                            </Col>
-                        </Row>
-                    </Col>
-
-                </Row>
+                <div className="buttons-group">
+                    <Button variant="primary" className="mr-5">Ativos</Button>
+                    <Button variant="primary" className="mr-5">Inativos</Button>
+                </div>
             </div>
             <ul>
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap';
 import { Collapse } from 'reactstrap';
 
 import './styles.css';
@@ -9,103 +9,160 @@ import './styles.css';
 export default function Influencer() {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [inputValue, setInputValue] = useState('');
 
     const toggle = () => setIsOpen(!isOpen);
 
-    const [anuncios, setAnuncios] = useState([1, 2, 3, 4, 5, 6]);
 
+    const [anuncios, setAnuncios] = useState([{}]);
+    // const [anunciosFiltrados, setAnunciosFiltrados] = useState();
+    const anunciosFiltrados = [];
+    const anunciosTodos = anuncios;
+
+    function teste(anuncios) {
+        // setAnuncios({
+        //     id: anuncios.id,
+        //     marca: anuncios.marca,
+        //     ig_empresa: anuncios.ig_empresa,
+        //     cidade: anuncios.cidade,
+        //     endereco: anuncios.endereco,
+        //     setor: anuncios.setor,
+        //     isOpen: !isOpen,
+        // });
+
+        console.log(anuncios);
+    }
+
+
+    function pesquisar() {
+
+
+        // console.log(anunciosTodos);
+        setAnuncios(anunciosTodos);
+
+
+        anuncios.map((anuncios) => {
+            if (anuncios.marca.toLowerCase() === inputValue.toLowerCase()) {
+                anunciosFiltrados.push(anuncios);
+                setAnuncios(anunciosFiltrados);
+
+            } else {
+                // setAnuncios(anuncios);
+            }
+        });
+
+
+        // setAnuncios(anunciosFiltrados)
+    }
+
+    useEffect(() => {
+        setAnuncios([
+            {
+                id: 1,
+                marca: 'Nike',
+                ig_empresa: '@NikeOficial',
+                cidade: 'Gôiania',
+                endereco: 'Shopping Flamboyant',
+                setor: 'Roupas',
+                isOpen,
+            },
+            {
+                id: 2,
+                marca: 'Pandora',
+                ig_empresa: '@Pandora',
+                cidade: 'Gôiania',
+                endereco: 'Shopping Flamboyant',
+                setor: 'Acessórios',
+            },
+            {
+                id: 3,
+                marca: 'M.A.C.',
+                ig_empresa: '@M.A.C.',
+                cidade: 'Gôiania',
+                endereco: 'Shopping Flamboyant',
+                setor: 'Beleza',
+            },
+            {
+                id: 4,
+                marca: 'Nike',
+                ig_empresa: '@testetets',
+                cidade: 'Gôiania',
+                endereco: 'Shopping Flamboyant',
+                setor: 'Roupas',
+            },
+        ]);
+    }, []);
 
 
     return (
 
         <div className="content">
 
-            <div className="header">
-                <Row className="row-header justify-content-md-center">
-                    <Col lg={4}>
-                        <div className="title">
-                            <h1 className="search-marca">Pesquisa marca:</h1>
-                            <h3 className="results">150 resultados</h3>
-                        </div>
-                    </Col>
+            <div className="">
 
-                    <Col lg={8}>
+                <h1 className="search-marca mb-4">Pesquisa marca:</h1>
 
+                <InputGroup className="mb-3 search-input" size="lg" >
+                    <FormControl
+                        value={inputValue} onChange={event => setInputValue(event.target.value)}
+                        placeholder="Digite uma marca..."
+                    />
+                    <InputGroup.Append>
+                        <Button variant="outline-secondary" onClick={pesquisar}>Pesquisar</Button>
+                    </InputGroup.Append>
+                </InputGroup>
 
-                        <div className="search">
-                            <input className="search-input" type="text" />
-                            <Row className="justify-content-md-center">
-                                {/* <div className="all-filters"></div> */}
-                                <Col>
-                                    <div className="filter"><span className="title-filter">Tudo</span></div>
-                                </Col>
-                                <Col>
-                                    <div className="filter"><span className="title-filter">Roupas</span></div>
-                                </Col>
-                                <Col>
-                                    <div className="filter"><span className="title-filter">Acessórios</span></div>
-                                </Col>
-                                <Col>
-                                    <div className="filter"><span className="title-filter">Beleza</span></div>
+                <div className="buttons-group">
+                    <Button variant="primary" className="mr-5">Tudo</Button>
+                    <Button variant="primary" className="mr-5">Roupa</Button>
+                    <Button variant="primary" className="mr-5">Acessórios</Button>
+                    <Button variant="primary">Beleza</Button>
+                </div>
 
-                                </Col>
-                            </Row>
-                        </div>
-                    </Col>
-
-
-                </Row>
             </div>
             <ul>
 
                 {anuncios.map(anuncios => (
-                    <section className="empresa-list" onClick={toggle}>
+                    <li className="empresa-list" key={anuncios.id} onClick={() => teste(anuncios)}>
 
                         <div className="circle"></div>
                         <div className="empresa">
-
-
 
                             <Col>
                                 <div className="foto"></div>
                             </Col>
                             <Col lg={4}>
                                 <div className="nome">
-                                    <h2 className="title">Nome da empresa</h2>
-                                    <h3 className="description">@ig_empresa</h3>
-                                    <Collapse isOpen={isOpen}>
-                                        <h3 className="description">Desejo que você
+                                    <h2 className="title">{anuncios.marca}</h2>
+                                    <h3 className="description">{anuncios.ig_empresa}</h3>
+                                    <Collapse isOpen={anuncios.isOpen}>
+                                        {/* <h3 className="description">Desejo que você
                                         Não tenha medo da vida, tenha medo de não vivê-la.
-                                Não há céu sem tempestades. Por isso, comi o cu de quem ta lendo</h3>
+                                Não há céu sem tempestades. Por isso, comi o cu de quem ta lendo</h3> */}
                                     </Collapse>
                                 </div>
                             </Col>
                             <Col lg={3}>
                                 <div className="cidade">
-                                    <h2 className="title">Cidade</h2>
-                                    <h3 className="description">Endereço</h3>
-                                    <Collapse isOpen={isOpen}>
-                                        <h3 className="description">Breno corno</h3>
-                                        <h3 className="description">João comedor de casadas</h3>
+                                    <h2 className="title">{anuncios.cidade}</h2>
+                                    <h3 className="description">{anuncios.endereco}</h3>
+                                    <Collapse isOpen={anuncios.isOpen}>
+                                        {/* <h3 className="description">Breno corno</h3> */}
                                     </Collapse>
                                 </div>
                             </Col>
                             <Col lg={3}>
                                 <div className="setor">
                                     <h2 className="title">Setor</h2>
-                                    <h3 className="description">Beleza</h3>
-                                    <Collapse isOpen={isOpen}>
-                                        <h3 className="description" >Só é corno quem é curioso</h3>
+                                    <h3 className="description">{anuncios.setor}</h3>
+                                    <Collapse isOpen={anuncios.isOpen}>
+                                        {/* <h3 className="description" >Só é corno quem é curioso</h3> */}
                                     </Collapse>
                                 </div>
                             </Col>
 
-
                         </div>
-
-
-
-                    </section>
+                    </li>
                 ))}
             </ul>
         </div >
