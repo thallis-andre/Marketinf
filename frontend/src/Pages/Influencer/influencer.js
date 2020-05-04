@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap';
 import { Collapse } from 'reactstrap';
 
-import './styles.css';
+import './influencer.css';
 
 
 export default function Influencer() {
