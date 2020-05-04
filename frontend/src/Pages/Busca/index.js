@@ -108,7 +108,7 @@ export default function Influencer() {
                         placeholder="Digite uma marca..."
                     />
                     <InputGroup.Append>
-                        <Button variant="outline-secondary" onClick={pesquisar}>Pesquisar</Button>
+                        <Button variant="primary" onClick={pesquisar}>Pesquisar</Button>
                     </InputGroup.Append>
                 </InputGroup>
 
