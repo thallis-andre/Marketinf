@@ -3,6 +3,7 @@
     justify-content: space-between; */
     /* padding: 50px; */
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -106,3 +107,56 @@
     height: 85%;
 
 }
+
+
+
+.home-title {
+    font-size: 2.8em;
+}
+
+.home-p {
+    font-size: 1.75em;
+}
+ 
+.text-video {
+    color: #4F4F4F;
+    font-size: 3em;
+    font-weight: 600;
+    margin-top: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-video{
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content2{
+    margin-top: 25vh;
+    margin-bottom: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grafico-d {
+    margin-left: 5vh;
+    height: 50vh;
+}
+
+.title-grafico-d {
+    margin-left: 15vh;
+    font-size: 3em;
+    font-weight: 600;
+    color: #4F4F4F;
+}
+
+.text-grafico-d {
+    margin-top: 5vh;
+    margin-left: 15vh;
+    font-size: 30px;
+    color: #4F4F4F;
+}
+
