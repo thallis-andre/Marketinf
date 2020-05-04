@@ -10,7 +10,7 @@ import './anuncio.css';
 export default function Anuncio() {
 
 
-    const [anuncios, setAnuncios] = useState([1, 2, 3, 4, 5, 6]);
+    const [anuncios, setAnuncios] = useState([1, 2, 3]);
 
 
 
@@ -63,7 +63,7 @@ export default function Anuncio() {
                             <Col lg={3}>
                                 <div className="setor">
                                     <h2 className="title">Descrição</h2>
-                                    <h3 className="description">Procuro digital influencer com mais de 5 mil seguidores
+                                    <h3 className="description text-overflow">Procuro digital influencer com mais de 5 mil seguidores
                                     para divulgar meus produtos  </h3>
                                 </div>
                             </Col>

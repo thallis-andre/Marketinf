@@ -62,7 +62,7 @@ export default function Empresa() {
 
             <div className="">
 
-                <h1 className="search-marca mb-4">Pesquisa marca:</h1>
+                <h1 className="search-marca mb-4">Pesquisa influencer:</h1>
 
                 <InputGroup className="mb-3 search-input" size="lg" >
                     <FormControl
@@ -88,8 +88,9 @@ export default function Empresa() {
                     <li className="empresa-list" key={anuncios.id}>
 
                         <div className="circle"></div>
-                        <div className="empresa">
 
+
+                        <div className="empresa">
                             <Col>
                                 <div className="foto"></div>
                             </Col>
@@ -122,7 +123,6 @@ export default function Empresa() {
                                     </Collapse>
                                 </div>
                             </Col>
-
                         </div>
                     </li>
                 ))}
