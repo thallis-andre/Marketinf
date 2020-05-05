@@ -26,10 +26,6 @@ export default function Cadastrar() {
     }
     */
 
-    const chamarAlert = () => {
-        alert(`Nome:${nome} E-mail:${email} Senha:${senha}`);
-    }
-
 
     return (
         <div className="bcontent">
@@ -88,10 +84,6 @@ export default function Cadastrar() {
                                     <Button color="primary" type="submit">
                                         Próximo
                                     </Button>
-                                    <span> &nbsp; </span>
-                                    <Button color="primary" type="submit" onClick={chamarAlert}>
-                                        .
-                                    </Button>
                                     
                                 </Form>
                             </div>
@@ -109,20 +101,21 @@ export default function Cadastrar() {
             </Row>
 
             <Row className="content-video">
-                <iframe width="967" height="544" src="https://www.youtube.com/embed/Mxesac55Puo"
+                <iframe width="967" height="544" src="https://www.youtube.com/embed/SlGF_ubIVWM"
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen title="yt-video"></iframe>
+                allowfullscreen title="yt-video-marketinf">
+                </iframe>
 
             </Row>
 
             <Row className="justify-content-md-center content2">
 
                 <Col>
-                    <span className="title-grafico-d">Lorem Ipsum</span>
+                    <span className="title-grafico-d">Quem somos</span>
                     <div className="text-grafico-d">
-                    O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão.
-                    O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500,
-                    quando uma misturou os caracteres de um texto para criar um espécime de livro.
+                    Somos uma plataforma que na era da ascensão digital visa dar voz e visibilidade aos micro e pequenos empresários,
+                    que movem a economia do país, e aos influenciadores que representam um contato com a população que ainda não teve seu potencial aproveitado.
+                    Juntos, através da Marketinf, seremos capazes de unir as duas partes possibilitando uma relação mutualística que dará resultados incríveis.
                     </div>
                     <Button color="primary" size="lg" className="text-grafico-d" href="/cadastrar">Cadastrar</Button>
                                         
