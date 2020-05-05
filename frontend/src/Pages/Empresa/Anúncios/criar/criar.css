@@ -1,0 +1,56 @@
+.criar-anuncio {
+    padding: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.titulo-page {
+    font-size: 3em;
+    color: #4F4F4F;
+    font-weight: bold;
+
+}
+
+.input-group-novo-anuncio {
+    margin-top: 5em;
+}
+
+.label-anuncio{
+    font-size: 2em;
+    color: #4F4F4F;
+    font-weight: 500;
+    margin-right: 1em;
+}
+
+.margin-input-novo-anuncio {
+    margin-top: 4em;
+}
+
+.tamanho-input-group{
+    width: 70%;
+}
+
+.textarea-altura {
+    height: 100px;
+}
+
+.span-textarea {
+    margin-right: 1.75em;
+}
+
+.observacao{
+    position: absolute;
+    top: 50px;
+    color: #4F4F4F;
+}
+
+.width-anexar {
+    margin-right: 2.4em;
+}
+
+.button-criar {
+    position: absolute;
+    width: 200px;
+    right: 50px;
+    bottom: 50px;
+}

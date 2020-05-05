@@ -96,7 +96,7 @@
     margin-left: 2.5em;
     align-items: center;
     width: 75%;
-    height: 12vh;
+    min-height: 12vh;
     background-color: white;
     border-radius: 15px;
     padding: 0;

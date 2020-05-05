@@ -1,0 +1,62 @@
+.editar-influencer{
+    padding: 80px;
+    height: 100%;
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, auto)); */
+    /* grid-template-columns: repeat(12, 1fr); */
+}
+
+.conteiner-photo {
+    width: 220px;
+    height: 220px;
+    text-align: center;
+}
+
+.conteiner-photo span{
+    font-size: 1.25em;
+    color: #0075FF;
+    cursor: pointer;
+}
+
+.input-perfil{
+    border: none;
+    border-bottom: 1px solid #4F4F4F;
+    color: #4F4F4F;
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.label-perfil{
+    color: #4F4F4F;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.conteiner-inputs {
+    width: 100%;
+}
+
+.horizontal-inputs {
+    /* display: flex; */
+}
+
+.footer-perfil{
+    position: fixed !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100%;
+}
+
+.input-group-perfil{
+    margin-top: 6em;
+}
+
+.margin-input-group {
+    margin-right: 10em;
+}
+
+.icon-pointer{
+    cursor: pointer;
+}

@@ -24,7 +24,7 @@ export default function Influencer() {
         // setAnuncios({
         //     id: anuncios.id,
         //     marca: anuncios.marca,
-        //     ig_empresa: anuncios.ig_empresa,
+        //     ig_influencer: anuncios.ig_influencer,
         //     cidade: anuncios.cidade,
         //     endereco: anuncios.endereco,
         //     setor: anuncios.setor,
@@ -61,7 +61,7 @@ export default function Influencer() {
             {
                 id: 1,
                 marca: 'Nike',
-                ig_empresa: '@NikeOficial',
+                ig_influencer: '@NikeOficial',
                 cidade: 'Gôiania',
                 endereco: 'Shopping Flamboyant',
                 setor: 'Roupas',
@@ -70,7 +70,7 @@ export default function Influencer() {
             {
                 id: 2,
                 marca: 'Pandora',
-                ig_empresa: '@Pandora',
+                ig_influencer: '@Pandora',
                 cidade: 'Gôiania',
                 endereco: 'Shopping Flamboyant',
                 setor: 'Acessórios',
@@ -78,7 +78,7 @@ export default function Influencer() {
             {
                 id: 3,
                 marca: 'M.A.C.',
-                ig_empresa: '@M.A.C.',
+                ig_influencer: '@M.A.C.',
                 cidade: 'Gôiania',
                 endereco: 'Shopping Flamboyant',
                 setor: 'Beleza',
@@ -86,7 +86,7 @@ export default function Influencer() {
             {
                 id: 4,
                 marca: 'Nike',
-                ig_empresa: '@testetets',
+                ig_influencer: '@testetets',
                 cidade: 'Gôiania',
                 endereco: 'Shopping Flamboyant',
                 setor: 'Roupas',
@@ -99,7 +99,7 @@ export default function Influencer() {
 
         <div>
             <Navbar bg="primary" variant="dark">
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/influencer">
                     <img
                         alt="."
                         src={logoBSolo}
@@ -123,9 +123,9 @@ export default function Influencer() {
                 </Nav>
                 <Nav className="mr-auto">
                     <NavDropdown title="Perfil" id="collasible-nav-dropdown">
-                        <NavDropdown.Item href="#">Editar perfil</NavDropdown.Item>
+                        <NavDropdown.Item href="/influencer/perfil">Editar perfil</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#">Divulgações participadas</NavDropdown.Item>
+                        <NavDropdown.Item href="/influencer/divulgacoes">Divulgações participadas</NavDropdown.Item>
                     </NavDropdown>
                     <Button variant="outline-light" href="/" className="btn-nav-bar">Sair</Button>
                 </Nav>
@@ -158,10 +158,10 @@ export default function Influencer() {
                 <ul>
 
                     {anuncios.map(anuncios => (
-                        <li className="empresa-list" key={anuncios.id} onClick={() => teste(anuncios)}>
+                        <li className="influencer-list" key={anuncios.id} onClick={() => teste(anuncios)}>
 
                             <div className="circle"></div>
-                            <div className="empresa">
+                            <div className="influencer">
 
                                 <Col>
                                     <div className="foto"></div>
@@ -169,7 +169,7 @@ export default function Influencer() {
                                 <Col lg={4}>
                                     <div className="nome">
                                         <h2 className="title">{anuncios.marca}</h2>
-                                        <h3 className="description">{anuncios.ig_empresa}</h3>
+                                        <h3 className="description">{anuncios.ig_influencer}</h3>
                                         <Collapse isOpen={anuncios.isOpen}>
                                             {/* <h3 className="description">Desejo que você
                                             Não tenha medo da vida, tenha medo de não vivê-la.
